@@ -1,0 +1,27 @@
+题目：实现一个特殊的栈，在实现栈的基本功能的基础上，再实现返回栈中最小元素的操作
+
+要求：push,pop,getMin的时间复杂度都是O(1)
+
+思路：
+	设计一个专门的栈用来保存最小元素，存放数据的栈命名为stackData,存放最小值的栈命名为stackMin
+	用ArrayList模拟栈
+	
+	#push
+	假设放入的数据名为newNum，将其压入stackData，
+	    - 判断stackMin是否为空，
+	        - 如果为空，newNum放入stackMin
+	        - 如果不为空，比较newNum和stackMin栈顶元素大小，
+	            - 如果newNum小，stackMin栈顶元素更新为newNum
+	            - 如果newNum大，stackMin栈不放入任何内容
+	 
+	 #pop
+	 从stackData中弹出栈顶元素，记为value。由于stackMin栈顶值一定小于等于value
+		 - 判断value是否等于stackMin栈顶值（意味着取出了最小值，因此stackMin的栈顶值也需要弹出）
+		 	- 如果相等，弹出stackMin栈顶值
+		 	- 如果不等，返回value
+	 加入stack isEmpty异常，抛出运行时异常
+	 
+	 #getMin
+	 stackMin栈顶元素就是最小值，直接peek查看
+	 加入stack isEmpty异常，抛出运行时异常
+	            

@@ -1,4 +1,4 @@
-package getMinStack;
+package ch1.getMinStack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ public class MyStack1 {
 	}
 
 	/**
-	 * 压入
+	 * 压入到栈底
 	 * @param newNum 新压入的数
 	 */
 	public void push(int newNum) {
@@ -29,7 +29,7 @@ public class MyStack1 {
 	}
 	
 	/**
-	 * 弹出
+	 * 弹出栈顶元素
 	 * @return 弹出的值
 	 */
 	public int pop() {

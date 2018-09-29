@@ -1,4 +1,4 @@
-package getMinStack;
+package ch1.getMinStack;
 
 import org.junit.Test;
 

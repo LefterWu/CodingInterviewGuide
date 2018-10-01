@@ -1,0 +1,39 @@
+题目：Pet, Dog, Cat类如下
+
+public class Pet {
+	private String type;
+	
+	public Pet(String type) {
+		this.type = type;
+	}
+	
+	public String getPetType() {
+		return this.type;
+	}
+}
+
+public class Dog extends Pet {
+	public Dog() {
+		super("dog");	
+	}
+}
+
+public class Cat extends Pet {
+	public Cat() {
+		super("cat");	
+	}
+}
+
+实现一种猫狗队列的结构，实现以下方法：
+* add
+* pollAll
+* pollCat
+* pollDog
+* isEmpty
+* isCatEmpty
+* isDogEmpty
+注意，不能擅自改变用户类的结构
+
+思路：
+	新设计一个类，为不同实例盖上时间戳,把盖上时间戳后的实例放入猫狗队列
+
